@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Portfolio - Bafodé FADIGA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<style>
+.bgded.overlay::before {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.bgded.overlay {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(1.2) contrast(1.2) saturate(1.1);
+  position: relative;
+  overflow: hidden;
+}
+.typed-cursor {
+  color: #ff0000 !important;
+}
+#pageintro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 700px;
+  text-align: center;
+}
+
+#typed-text {
+  display: inline-block;
+  min-height: 80px;
+  min-width: 600px;
+}
+#pageintro .heading {
+  color: white;
+  font-size: 4rem;
+  font-family: "Arial Black", "Arial Bold", sans-serif;
+  font-weight: 700;
+}
+
+.firework {
+  position: absolute;
+  pointer-events: none;
+  animation: explode 1s ease-out forwards;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: spread 0.8s ease-out forwards, fade 0.8s ease-out forwards;
+}
+
+.spark {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: spark 0.5s ease-out forwards;
+  opacity: 0.8;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes spread {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0);
+  }
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes spark {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--sx), var(--sy)) scale(0);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body id="top">
+<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/inria.jpg'); min-height: 800px;" id="bgContainer"> 
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left" style="padding-left: 0; margin-left: 0;"> 
+        <h1 style="margin-left: 0;"><a href="../index.html" style="padding-left: 0;">FADIGA.COM</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <ul class="clear">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="epreuve-E5.html">Épreuve E5</a></li>
+          <li class="active"><a href="Inria.html">INRIA</a></li>
+          <li><a href="../veille.html">Veille technologique</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div id="pageintro" class="hoc clear"> 
+    <article>
+      <h3 class="heading"><span id="typed-text"></span></h3>
+      <script>
+        var typed = new Typed('#typed-text', {
+          strings: ['Présentation de mon entreprise'],
+          typeSpeed: 50,
+          backSpeed: 0,
+          loop: false,
+          showCursor: true,
+          cursorChar: '|',
+          cursorColor: '#ff0000'
+        });
+      </script>
+    </article>
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <div class="content"> 
+      <div class="sectiontitle" style="margin-bottom: 30px;">
+        <img src="../images/inria2.png" alt="Logo Inria" style="max-width: 200px; height: auto;">
+      </div>
+      <div style="text-align: justify; line-height: 1.6;">
+        <style>
+          .section-spacing h3 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-top: 10px;
+          }
+          .section-spacing p {
+            margin-bottom: 15px;
+          }
+          .section-spacing ul {
+            margin-top: 10px;
+            margin-bottom: 25px;
+          }
+          .section-spacing li {
+            margin-bottom: 8px;
+          }
+        </style>
+        <div class="section-spacing">
+        <h3 style="color: red;">Présentation d'Inria</h3>
+        <p><strong>Nom complet :</strong> Institut National de Recherche en Informatique et en Automatique</p>
+        <p><strong>Secteur d'activité :</strong> Recherche et innovation en sciences du numérique</p>
+        <p><strong>Domaine :</strong> Informatique, mathématiques appliquées, intelligence artificielle, robotique, cybersécurité, simulation, calcul haute performance, etc.</p>
+
+        <h3 style="color: red;">Mission</h3>
+        <p>Inria est un institut public de recherche français dédié aux sciences et technologies du numérique. Il conçoit et développe des logiciels, des algorithmes et des solutions innovantes en collaboration avec le monde académique et industriel.</p>
+
+        <h3 style="color: red;">Histoire</h3>
+        <p>Créé en 1967, Inria a été fondé dans le contexte du développement de l'informatique en France, pour stimuler la recherche dans ce domaine stratégique. Depuis, l'institut est devenu un acteur clé dans l'écosystème technologique européen, notamment grâce à ses contributions en open source, intelligence artificielle et systèmes embarqués.</p>
+
+        <h3 style="color: red;">Organisation et centres</h3>
+        <p>Inria dispose de 9 centres de recherche implantés dans différentes régions de France :</p>
+        <ul style="list-style-type: disc; margin-left: 20px; margin-bottom: 20px;">
+          <li>Inria Saclay – Île-de-France</li>
+          <li>Inria Paris</li>
+          <li>Inria Rennes – Bretagne Atlantique</li>
+          <li>Inria Grenoble – Rhône-Alpes</li>
+          <li>Inria Bordeaux – Sud-Ouest</li>
+          <li>Inria Lille – Nord Europe</li>
+          <li>Inria Sophia Antipolis – Méditerranée</li>
+          <li>Inria Nancy – Grand Est</li>
+          <li>Inria Lyon (récemment ouvert)</li>
+        </ul>
+
+        <h3 style="color: red;">Chiffres clés (2024)</h3>
+        <ul style="list-style-type: disc; margin-left: 20px; margin-bottom: 20px;">
+          <li>Environ 3 900 collaborateurs, dont de nombreux chercheurs, ingénieurs et doctorants.</li>
+          <li>Plus de 200 équipes-projets, souvent mixtes avec des universités et écoles d'ingénieurs.</li>
+          <li>Des dizaines de startups créées chaque année grâce à la valorisation des recherches.</li>
+          <li>Fort partenariat avec l'Union européenne dans le cadre de projets Horizon Europe.</li>
+        </ul>
+
+        <h3 style="color: red;">Mon expérience chez INRIA</h3>
+        <p>En tant qu'ingénieur support à INRIA, j'ai eu l'opportunité de travailler sur divers projets et d'acquérir une expérience précieuse dans le domaine de l'informatique et du support technique.<br>j'ai opéré dans le CDS avec notre cheffe de service Valerie OURANIER , mon tuteur Phillipe GIOT et Romain GONÇALVES
+        </p>
+        <div style="margin: 30px 0;">
+          <h3 style="color: red;">Missions et responsabilités</h3>
+          <p>Dans le cadre de mes fonctions, j'ai été amené à faire ces tâches :</p>
+          <ul style="list-style-type: disc; margin-left: 25px; margin-bottom: 20px;">
+            <li>Gestion du parc informatique (GTPI)</li>
+            <li>Assurer le support technique auprès des utilisateurs</li>
+            <li>Participer à l'amélioration continue des services</li>
+            <li>Gestion et résolution des incidents avec RT</li>
+            <li>Déploiment de postes informatiques windows avec SCCM</li>
+            <li>Déploiment de postes informatiques linux avec ansible</li>
+            <li>Assurer la maintenance des imprimantes</li>
+            <li>Participation au remplacement des imprimantes Toshiba par des imprimantes Kyocera</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - <a href="#">Bafodé FADIGA</a></p>
+    <p class="fl_right">Portfolio BTS SIO</p>
+  </div>
+</div>
+
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script>
+  // Simplified Firework effect
+  document.getElementById('bgContainer').addEventListener('click', function(e) {
+    const container = this.getBoundingClientRect();
+    const x = e.clientX - container.left;
+    const y = e.clientY - container.top;
+    createFirework(x, y);
+  });
+
+  function createFirework(x, y) {
+    const firework = document.createElement('div');
+    firework.className = 'firework';
+    firework.style.left = x + 'px';
+    firework.style.top = y + 'px';
+
+    // Create particles
+    const colors = ['#ff0000', '#ffffff']; // Just red and white
+    const particleCount = 16; // Reduced number of particles
+    
+    // Main firework particles
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.backgroundColor = colors[i % colors.length];
+      
+      // Calculate angle and distance
+      const angle = (i * (360 / particleCount));
+      const distance = 60 + Math.random() * 20; // Reduced spread
+      
+      // Set the particle's movement direction
+      const rad = angle * Math.PI / 180;
+      const xMove = Math.cos(rad) * distance;
+      const yMove = Math.sin(rad) * distance;
+      
+      particle.style.setProperty('--x', `${xMove}px`);
+      particle.style.setProperty('--y', `${yMove}px`);
+      
+      firework.appendChild(particle);
+    }
+
+    document.getElementById('bgContainer').appendChild(firework);
+    
+    // Remove the firework element after animation
+    setTimeout(() => {
+      firework.remove();
+    }, 1000);
+  }
+</script>
+</body>
+</html>

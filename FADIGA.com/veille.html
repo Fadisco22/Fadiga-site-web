@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Projet 3 - E6</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<style>
+  .typed-cursor {
+    color: #f8ac09d0 !important;
+  }
+  .breathing-effect {
+    color: white;
+    text-shadow: 0 0 10px red;
+    animation: breathing 5s infinite;
+  }
+
+  @keyframes breathing {
+    0% {
+      text-shadow: 0 0 10px red;
+    }
+    50% {
+      text-shadow: 0 0 20px red;
+    }
+    100% {
+      text-shadow: 0 0 10px red;
+    }
+  }
+
+  /* New styles for veille technologique tiles */
+  .veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+  }
+
+  .veille-tile {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .veille-tile h3 {
+    color: red;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+  }
+
+  .veille-tile p {
+    flex-grow: 1;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .veille-tile ul {
+    margin: 15px 0;
+    padding-left: 20px;
+  }
+
+  .veille-tile li {
+    margin-bottom: 8px;
+  }
+
+  /* Video background styles */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: relative;
+  }
+
+  .overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+</style>
+</head>
+<body id="top">
+<div class="bgded overlay" style="position: relative; min-height: 800px; background-image:url('images/demo/backgrounds/MajoranaVIDEO.mp4'); background-size: cover; background-position: center;">
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="images/demo/backgrounds/MajoranaVIDEO.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left" style="padding-left: 0; margin-left: 0;"> 
+        <h1 style="margin-left: 0;"><a href="index.html" style="padding-left: 0;">FADIGA.COM</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <ul class="clear">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/epreuve-E5.html">Épreuve E5</a></li>
+          <li><a href="pages/Inria.html">INRIA</a></li>
+          <li class="active"><a href="veille.html">Veille technologique</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div id="pageintro" class="hoc clear"> 
+    <article>
+      <h3 class="heading breathing-effect">MAJORANA 1</h3>
+    </article>
+  </div>
+</div>
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <section id="veille-techno" style="margin-top: 250px; text-align: left; font-family: 'Open Sans', sans-serif;">
+      <div class="sectiontitle">
+        <p class="heading font-x2" style="color: red; font-size: 2.5em; font-family: 'Open Sans', sans-serif; text-align: left; margin: 0;">Veille technologique</p>
+      </div>
+
+      <div style="margin-bottom: 40px;">
+        <h3 style="color: red; font-family: 'Open Sans', sans-serif;">Qu'est-ce que la veille technologique ?</h3>
+        <p style="font-family: 'Open Sans', sans-serif;">La veille technologique, qui fait partie intégrante de la veille stratégique, consiste à observer en continu les avancées techniques et les innovations dans un secteur d'activité donné. Elle englobe des actions telles que la surveillance, la collecte, le partage et la diffusion d'informations utiles pour anticiper ou comprendre les évolutions dans des domaines comme la recherche, le développement, les brevets, les nouveaux produits, matériaux, procédés, concepts ou encore les méthodes de fabrication innovantes.</p>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <h3 style="color: red; font-family: 'Open Sans', sans-serif;">Les types de veille</h3>
+      </div>
+
+      <div class="veille-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 40px;">
+        <div class="veille-tile">
+          <h3>Veille passive</h3>
+          <p>Elle consiste à recevoir des informations via des sources automatisées : newsletters, flux RSS, réseaux sociaux, alertes Google, forums spécialisés, etc.</p>
+          <p>L'utilisateur consulte les nouveautés régulièrement mais n'effectue pas lui-même de recherches approfondies.</p>
+          <p><strong>Avantage :</strong> gain de temps et simplicité.</p>
+        </div>
+
+        <div class="veille-tile">
+          <h3>Veille active</h3>
+          <p>L'utilisateur effectue une recherche volontaire, ciblée et approfondie sur un sujet précis (ex. : cybersécurité, nouvelles puces, IA...).</p>
+          <p>Elle mobilise des outils de recherche avancée, des bases de données spécialisées, des rapports techniques ou des articles scientifiques.</p>
+          <p><strong>Avantage :</strong> informations plus précises, adaptées aux besoins spécifiques du veilleur.</p>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 40px;">
+        <h3 style="color: red; font-family: 'Open Sans', sans-serif;">Introduction à l'informatique quantique</h3>
+        <div class="veille-tile" style="max-width: none;">
+          <h3>Qu'est-ce qu'un ordinateur quantique ?</h3>
+          <p>Un ordinateur quantique est une machine qui utilise des qubits, capables de représenter 0 et 1 en même temps grâce à la mécanique quantique. Cela lui permet de traiter d’énormes volumes de calculs en parallèle, contrairement à l’ordinateur classique qui traite les informations de façon séquentielle, un bit à la fois, ce qui le rend beaucoup plus lent pour certains types de calculs complexes.</p>
+          
+          <div style="position: relative; width: 60%; max-width: 600px; padding-bottom: 33.75%; margin: 20px auto;">
+            <iframe 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+              src="https://www.youtube.com/embed/kSdPuttca8U" 
+              title="Vidéo explicative sur l'ordinateur quantique" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <h3>Presentation Majorana 1</h3>
+          <p>Majorana 1 est une puce quantique expérimentale conçue par Microsoft. Elle repose sur une approche innovante : l'utilisation de qubits topologiques, des unités d'information quantique basées sur les quasi-particules de Majorana. Contrairement aux qubits traditionnels, ces qubits sont plus stables et moins sensibles aux erreurs liées à l'environnement.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+            <div>
+              <h3 style="color: red;">Objectifs et avantages</h3>
+              <p>Les objectifs principaux de Majorana 1 sont :</p>
+              <ul style="list-style-type: none; padding-left: 0; margin-bottom: 15px;">
+                <li style="margin-bottom: 8px;">• Réduire les erreurs courantes dans les systèmes quantiques classiques</li>
+                <li style="margin-bottom: 8px;">• Rendre l'informatique quantique plus fiable et évolutive</li>
+                <p>Cette technologie a un fort potentiel dans des domaines comme:</p> <br>
+                <li style="margin-bottom: 8px;">• La cybersécurité</li>
+                <li style="margin-bottom: 8px;">• La simulation moléculaire pour la recherche médicale ou chimique</li>
+                <li style="margin-bottom: 8px;">• L'optimisation de réseaux ou de logistique</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 style="color: red;">Caractéristiques principales de la puce Majorana 1</h3>
+              <ul style="list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 12px;">• Type de qubit : Qubits topologiques (plus stables, moins d'erreurs)</li>
+                <li style="margin-bottom: 12px;">• Nombre de qubits : 8 (projet de monter à 1 million)</li>
+                <li style="margin-bottom: 12px;">• Technologie : Basée sur des particules appelées quasi-particules de Majorana</li>
+                <li style="margin-bottom: 12px;">• Matériaux : Alliage de semi-conducteurs et supraconducteurs</li>
+                <li style="margin-bottom: 12px;">• Température de fonctionnement : proche du zéro absolu (≈ -273 °C)</li>
+                <li style="margin-bottom: 12px;">• Statut : Prototype avancé, non encore commercialisé</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="veille-grid">
+      </div>
+
+      <div style="margin: 50px 0; display: flex; flex-direction: column; align-items: center;">
+        <h3 style="color: red; font-family: 'Open Sans', sans-serif; margin-bottom: 20px; text-align: center;">Puce Majorana 1</h3>
+        <img src="images/demo/Majorana-puce.jpg" alt="Puce Majorana 1" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      </div>
+
+      <div style="margin: 50px 0;">
+        <h3 style="color: red; font-family: 'Open Sans', sans-serif; margin-bottom: 20px;">Sources</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li style="margin-bottom: 12px; color: #333;">• Site officiel Microsoft Azure Quantum</li>
+          <li style="margin-bottom: 12px; color: #333;">• Blog Microsoft Research</li>
+          <li style="margin-bottom: 12px; color: #333;">• Article ZDNet – "Microsoft crée un nouveau type de qubit quantique"</li>
+          <li style="margin-bottom: 12px; color: #333;">• Numérama – "Microsoft annonce une avancée dans l'informatique quantique"</li>
+          <li style="margin-bottom: 12px; color: #333;">• Google Alertes et veille RSS (termes suivis : "qubit topologique", "Microsoft Majorana 1", "ordinateur quantique")</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</div>
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - <a href="#">Bafodé FADIGA</a></p>
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.flexslider-min.js"></script>
+<script>
+  var typed = new Typed('#typed-text', {
+    strings: ['Bienvenue sur mon portfolio', 'Découvrez mes projets', 'Contactez-moi pour plus d\'informations'],
+    typeSpeed: 50,
+    backSpeed: 25,
+    backDelay: 2000,
+    startDelay: 1000,
+    loop: true
+  });
+</script>
+</body>
+</html>

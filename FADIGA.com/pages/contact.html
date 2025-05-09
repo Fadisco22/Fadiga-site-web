@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Contact - FADIGA.COM</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<style>
+  .typed-cursor {
+    color: #f8ac09d0 !important;
+  }
+  .breathing-effect {
+    color: white;
+    text-shadow: 0 0 10px red;
+    animation: breathing 5s infinite;
+  }
+
+  @keyframes breathing {
+    0% { text-shadow: 0 0 10px red; }
+    50% { text-shadow: 0 0 20px red; }
+    100% { text-shadow: 0 0 10px red; }
+  }
+
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: red;
+    outline: none;
+  }
+
+  .form-group textarea {
+    height: 150px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    background-color: red;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #cc0000;
+  }
+
+  .contact-info {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    color: red;
+    margin-bottom: 20px;
+  }
+
+  .contact-info p {
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .social-links {
+    margin-top: 20px;
+  }
+
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: red;
+  }
+
+  .overlay {
+    position: relative;
+  }
+
+  .overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+</style>
+</head>
+<body id="top">
+<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/MajoranaVIDEO.mp4'); min-height: 300px;">
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left"> 
+        <h1><a href="../index.html">FADIGA.COM</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <ul class="clear">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="epreuve-E5.html">Épreuve E5</a></li>
+          <li><a href="Inria.html">INRIA</a></li>
+          <li><a href="../veille.html">Veille technologique</a></li>
+          <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div id="pageintro" class="hoc clear"> 
+    <article>
+      <h3 class="heading breathing-effect">CONTACT</h3>
+    </article>
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <div class="contact-container">
+      <div class="contact-form">
+        <h2 style="color: red; margin-bottom: 30px; text-align: center;">Contactez-moi</h2>
+        <form action="#" method="POST" id="contact-form">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div style="text-align: center;">
+            <button type="submit" class="submit-btn">Envoyer</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h3>Autres moyens de me contacter</h3>
+        <p>Email: contact@fadiga.com</p>
+        <p>Téléphone: +33 (0)6 XX XX XX XX</p>
+        <p>Localisation: Paris, France</p>
+        
+        <div class="social-links">
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - <a href="#">Bafodé FADIGA</a></p>
+  </div>
+</div>
+
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="../layout/scripts/jquery.flexslider-min.js"></script>
+</body>
+</html>

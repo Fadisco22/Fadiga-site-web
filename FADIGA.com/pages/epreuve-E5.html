@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Portfolio - Bafodé FADIGA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<style>
+:root {
+  --matrix-green: #00ff41;
+  --matrix-dark: #0a0a0a;
+  --matrix-glow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
+}
+
+* {
+  font-family: 'Share Tech Mono', monospace !important;
+}
+
+body {
+  background-color: var(--matrix-dark);
+  color: var(--matrix-green);
+}
+
+.bgded.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.bgded.overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+#myVideo {
+  filter: brightness(0.7) contrast(1.2) saturate(1.2) hue-rotate(60deg);
+}
+
+.typed-cursor {
+  color: var(--matrix-green) !important;
+}
+
+#pageintro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 700px;
+  text-align: center;
+}
+
+#pageintro .heading {
+  color: var(--matrix-green);
+  font-size: 4rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: 700;
+  text-shadow: var(--matrix-glow);
+  letter-spacing: 2px;
+}
+
+.wrapper.row3 {
+  background-color: rgba(10, 10, 10, 0.9);
+}
+
+.heading.underline {
+  color: var(--matrix-green);
+  text-shadow: var(--matrix-glow);
+}
+
+.project-card {
+  background: rgba(20, 20, 20, 0.9) !important;
+  border: 1px solid var(--matrix-green);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+.project-card h3 {
+  color: var(--matrix-green) !important;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--matrix-glow);
+  background: rgba(30, 30, 30, 0.9) !important;
+}
+
+#mainav a {
+  color: var(--matrix-green);
+  text-shadow: 0 0 5px var(--matrix-green);
+}
+
+#mainav a:hover {
+  text-shadow: var(--matrix-glow);
+}
+
+#logo h1 a {
+  color: var(--matrix-green);
+  text-shadow: var(--matrix-glow);
+}
+</style>
+</head>
+<body id="top">
+<div class="bgded overlay" style="min-height: 800px; position: relative; overflow: hidden;" id="bgContainer">
+    <video autoplay muted loop id="myVideo" style="position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1;">
+      <source src="../images/demo/backgrounds/Matrix.mp4" type="video/mp4">
+    </video>
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left" style="padding-left: 0; margin-left: 0;"> 
+        <h1 style="margin-left: 0;"><a href="../index.html" style="padding-left: 0;">FADIGA.COM</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <ul class="clear">
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a href="epreuve-E5.html">Épreuve E5</a></li>
+          <li><a href="Inria.html">INRIA</a></li>
+          <li><a href="../veille.html">Veille technologique</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div id="pageintro" class="hoc clear"> 
+    <article>
+      <h3 class="heading"><span id="typed-text"></span></h3>
+      <script>
+        var typed = new Typed('#typed-text', {
+          strings: ['Épreuve E5 - BTS SIO'],
+          typeSpeed: 50,
+          backSpeed: 0,
+          loop: false,
+          showCursor: true,
+          cursorChar: '|',
+          cursorColor: '#ff0000'
+        });
+      </script>
+    </article>
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <div class="content"> 
+      <div class="sectiontitle" style="margin-bottom: 30px;">
+        <p class="heading font-x2" style="color: var(--matrix-green); text-shadow: var(--matrix-glow);">L'épreuve E5 - BTS SIO SISR</p>
+      </div>
+      <div style="text-align: justify; line-height: 1.8; max-width: 800px; margin: 0 auto; color: #00ff41; text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);">
+        <p style="font-size: 1.1em; margin-bottom: 20px; border-left: 3px solid var(--matrix-green); padding-left: 20px;">L'épreuve E5 est une composante essentielle du BTS SIO option SISR. Elle évalue notre capacité à concevoir et maintenir des solutions d'infrastructure réseau. Cette épreuve met l'accent sur nos compétences techniques acquises pendant la formation et nos stages en entreprise.</p>
+        
+        <p style="font-size: 1.1em; margin-bottom: 40px; border-left: 3px solid var(--matrix-green); padding-left: 20px;">L'évaluation se base sur un dossier professionnel présentant nos réalisations techniques, suivi d'une soutenance orale devant un jury d'experts. C'est l'occasion de démontrer notre maîtrise des technologies réseau et notre capacité à gérer des projets d'infrastructure.</p>
+
+        <div class="sectiontitle" style="margin: 50px 0 30px;">
+          <p class="heading font-x2">Projets Réalisés en Cours</p>
+        </div>
+
+        <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+          <!-- Projet 1 -->
+          <a href="../fichiers/ADDS.pdf" class="project-card" style="text-decoration: none; color: inherit; background: #f8f9fa; border-radius: 10px; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <h3 style="color: #2c3e50;">configuration windows server AS,DNS,DHCP,GPO</h3>
+          </a>
+
+          <!-- Projet 2 -->
+          <a href="../fichiers/vlan.pdf" class="project-card" style="text-decoration: none; color: inherit; background: #f8f9fa; border-radius: 10px; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <h3 style="color: #2c3e50;">Création de VLAN</h3>
+          </a>
+
+          <!-- Projet 3 -->
+          <a href="../fichiers/ProjetGLPI.pdf" class="project-card" style="text-decoration: none; color: inherit; background: #f8f9fa; border-radius: 10px; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <h3 style="color: #2c3e50;">GLPI et Liaison LDAP</h3>
+          </a>
+
+          <!-- Projet 4 -->
+          <a href="../fichiers/routeur.pdf" class="project-card" style="text-decoration: none; color: inherit; background: #f8f9fa; border-radius: 10px; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <h3 style="color: #2c3e50;">Configuration d'un routeur depuis Windows server</h3>
+          </a>
+
+          <!-- Projet 5 -->
+          <a href="#" class="project-card" style="text-decoration: none; color: inherit; background: #f8f9fa; border-radius: 10px; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <h3 style="color: #2c3e50;">Mise en place d'un service SSH sécurisé</h3>
+          </a>
+        </div>
+
+        <style>
+          .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          }
+        </style>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <p class="fl_left">Copyright &copy; 2025 - All Rights Reserved - <a href="#">Bafodé FADIGA</a></p>
+    <p class="fl_right">Portfolio BTS SIO</p>
+  </div>
+</div>
+
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

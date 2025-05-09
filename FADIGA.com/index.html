@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Portfolio - Bafodé FADIGA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<style>
+  .typed-cursor {
+    color: #f8ac09d0 !important;
+  }
+  
+  /* Add fixed height for typing animation container */
+  #pageintro article h3.heading {
+    min-height: 60px;  /* Adjust this value based on your needs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+</style>
+
+</head>
+<body id="top">
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/green-field.jpg'); background-size: cover; background-position: center;"> 
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left" style="padding-left: 0; margin-left: 0;"> 
+        <h1 style="margin-left: 0;"><a href="index.html" style="padding-left: 0;">FADIGA.COM</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <ul class="clear">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="pages/epreuve-E5.html">Épreuve E5</a></li>
+          <li><a href="pages/Inria.html">INRIA</a></li>
+          <li><a href="veille.html">Veille technologique</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div id="pageintro" class="hoc clear"> 
+    <article>
+      <h3 class="heading"><span id="typed-text"></span></h3>
+      <p>Bafodé FADIGA • BTS SIO • 2024-2025</p>
+      <footer>
+        <ul class="nospace inline pushright">
+          <li><a class="btn inverse" href="fichiers/CV FADIGA BAFODE.pdf.pdf">Télécharger mon CV</a></li>
+          <li><a class="btn inverse" href="fichiers/Tableau de synthese - Epreuve E5 - FADIGA.pdf">Tableau de synthèse</a></li>
+        </ul>
+      </footer>
+    </article>
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <section id="introblocks">
+      <style>
+        .centered-projects {
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          margin-bottom: 80px;
+          position: relative;
+        }
+        .project-box {
+          width: 400px;
+          height: 100%;
+          padding: 10px;
+          position: relative;
+          background: white;
+          border-radius: 10px;
+          z-index: 1;
+        }
+        .project-box figure {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .project-box figcaption {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+        .project-box img {
+          width: 120px;
+          height: 130px;
+          object-fit: contain;
+          border-radius: 12px;
+          margin: 0 auto;
+          background: white;
+          padding: 15px;
+        }
+        .project-box h6.heading {
+          margin: 6px 0;
+          font-size: 1em;
+        }
+        .project-box p {
+          margin: 3px 0;
+          line-height: 1.2;
+          font-size: 0.9em;
+        }
+        .project-box-wrapper {
+          position: relative;
+          padding: 3px;
+          border-radius: 12px;
+          background: transparent;
+        }
+        .project-box-wrapper::before,
+        .project-box-wrapper::after {
+          content: '';
+          position: absolute;
+          left: -2px;
+          top: -2px;
+          width: calc(100% + 4px);
+          height: calc(100% + 4px);
+          background: linear-gradient(90deg, #4a90e2, #FF8C00, #4a90e2);
+          background-size: 300% 100%;
+          border-radius: 12px;
+          z-index: 0;
+          animation: none;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+        .project-box-wrapper::after {
+          filter: blur(15px);
+          opacity: 0.7;
+          z-index: -1;
+        }
+        .project-box-wrapper.glow::before,
+        .project-box-wrapper.glow::after {
+          opacity: 1;
+          animation: rgb-flow 3s linear infinite;
+        }
+        @keyframes rgb-flow {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      </style>
+      <div class="centered-projects">
+        <div class="project-box-wrapper">
+          <div class="project-box">
+          <figure><a class="imgover" href="fichiers/Projet1_ADDS_GLPI Bafodé.pdf"><img src="../images/GLPI.png" alt="logo-glpi" width="500" height="500" style="object-fit: contain;"></a>
+            <figcaption>
+              <h6 class="heading">Installation et configuration d'un AD DS et GLPI</h6>
+              <p style="text-align: left; color: #4a90e2; text-shadow: 0 0 1px rgba(74, 144, 226, 0.3);">
+                • Configuration d'un windows server 2019<br>
+                • Mise en place des services DHCP, DNS,AD<br>
+                • Mise en place de GPO fond d'écran et d'un lecteur Mappé<br>
+                • Mise en place d'un serveur GLPi sous ubuntu server 24.04<br>
+                • Liaison LDAP
+              </p>
+            </figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="project-box-wrapper">
+          <div class="project-box">
+          <figure><a class="imgover" href="#"><img src="images/SSH.png" alt=""></a>
+            <figcaption>
+              <h6 class="heading">Mise en place d'un serveur SSH</h6>
+              <p>•</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .tiktok-button {
+        display: inline-block;
+        padding: 15px 40px;
+        font-size: 2em;
+        font-weight: bold;
+        background: linear-gradient(45deg, #4a90e2, #FF8C00);
+        border-radius: 25px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        margin: 40px auto;
+        display: table;
+        cursor: pointer;
+      }
+
+      .tiktok-button span {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+
+      .tiktok-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #FF8C00, #4a90e2);
+        transition: all 0.5s ease;
+      }
+
+      .tiktok-button:hover::before {
+        left: 0;
+      }
+
+      .tiktok-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      }
+
+      @keyframes glitch {
+        0% { transform: translate(0); }
+        20% { transform: translate(-2px, 2px); }
+        40% { transform: translate(-2px, -2px); }
+        60% { transform: translate(2px, 2px); }
+        80% { transform: translate(2px, -2px); }
+        100% { transform: translate(0); }
+      }
+
+      .tiktok-button:active {
+        transform: translateY(2px);
+        animation: glitch 0.3s ease;
+      }
+
+    </style>
+
+    <div class="tiktok-button" onclick="toggleGlow()">
+      <span>MES PROJETS E6</span>
+    </div>
+
+    <script>
+      function toggleGlow() {
+        const wrappers = document.querySelectorAll('.project-box-wrapper');
+        wrappers.forEach(wrapper => {
+          wrapper.classList.toggle('glow');
+        });
+      }
+    </script>
+
+    <hr class="btmspace-80">
+
+    <section id="overview">
+      <div class="sectiontitle">
+        <p class="heading font-x2" style="color: #FF8C00;">Présentation👋</p>
+      </div>
+      <ul class="nospace group btmspace-80">
+        <li class="full_width">
+          <article>
+            <p>Je suis étudiant au sein <b>d'ESTIAM</b> à Porte des Lilas (20e) en deuxième année de <b>BTS SIO</b> 
+              (Services Informatiques aux Organisations) en <b>alternance</b>, spécialité <b>SISR</b> (Solutions d'Infrastructure, Systèmes et Réseaux).<br>
+              J'ai une grande passion pour l'informatique et les nouvelles technologies, c'est donc pour cela que j'ai décidé de me lancer dans cette formation apres avoir obtenu mon bac pro Systèmes Numériques au <b>lycée professionnel Charles Tillon.</b> Je fais preuve de <b>curiosité,</b> de <b>rigueur</b> et d'un <b>bon esprit d'analyse</b> dans les projets techniques auxquels je participe. En dehors du cadre scolaire, je m'intéresse également au <b>football</b>, à la <b>boxe</b> et aux <b>jeux vidéo</b>, des activités qui développent chez moi l'<b>esprit d'équipe</b>, la <b>discipline</b> et la <b>réactivité</b>.</p>  
+          </article>
+        </li>
+      </ul>
+      <div class="sectiontitle">
+        <p class="heading font-x2" style="color: #FF8C00;">Projets Professionel💻</p>
+      </div>
+      <ul class="nospace group btmspace-80">
+        <li class="full_width">
+          <article>
+            <p>Professionnellement, je souhaite m'orienter vers le domaine de la cybersécurité, un secteur en pleine croissance qui suscite un réel intérêt de ma part. Après l'obtention de mon <b>BTS SIO</b> (Services Informatiques aux Organisations – Bac +2), je prévois de poursuivre mes études en intégrant un <b>Bachelor CSI</b> (Concepteur en Sécurité Informatique – Bac +3) ou, à défaut, une <b>Licence Professionnelle Administration et Sécurité des Systèmes et des Réseaux (ASSR)</b>, afin de renforcer mes compétences dans la protection des infrastructures informatiques.<br><br>
+
+            Mon objectif à long terme est d'intégrer une école d'ingénieur pour préparer le diplôme <b>Expert Réseaux, Infrastructures et Sécurité (ERIS – Bac +5)</b>, et ainsi me spécialiser davantage dans les métiers liés à la cybersécurité et à l'architecture réseau.<br><br>
+
+            Je souhaite poursuivre mon parcours en alternance, un mode de formation qui présente plusieurs avantages :<br><br>
+
+            • Acquérir une expérience professionnelle concrète tout au long de mon cursus<br>
+            • Mettre en pratique mes acquis théoriques et les confronter aux réalités du terrain<br>
+            • Faciliter mon insertion professionnelle à l'issue de mes études grâce à une meilleure connaissance du monde de l'entreprise</p>
+            </p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section><br><br>
+      <div class="sectiontitle" style="margin-bottom: 30px;">
+        <p class="heading font-x2" style="color: #FF8C00;">BTS SIO</p>
+      </div>
+      <div style="text-align: center; margin-bottom: 30px;">
+        <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme de niveau Bac +2 qui forme des techniciens capables de répondre aux besoins informatiques des entreprises. Il propose deux spécialités, appelées options, qui permettent aux étudiants de se spécialiser selon leur projet professionnel</p>
+      </div>
+      <div class="presentation-box" style="display: flex; justify-content: space-around; align-items: stretch;">
+        <div class="box" style="flex: 1; margin-right: 40px; opacity: 0; transition: opacity 2s ease-in-out;">
+          <h3>Option SISR🌐</h3>
+          <p>La spécialité SISR (Solutions d'Infrastructure, Systèmes et Réseaux) forme des techniciens capables de gérer et maintenir des infrastructures réseaux et systèmes. Les étudiants apprennent à installer, configurer et sécuriser les équipements et services réseaux. 
+            <br>voici quelques metiers qu'un titulaire de l'option  SISR peut exercer:<br></p>
+          <ul style="list-style-type: none; padding: 0; text-align: left;">
+            <li>‣ Administrateur systèmes et réseaux</li>
+            <li>‣ Informaticien support et déploiement</li>
+            <li>‣ Pilote d'exploitation</li>
+            <li>‣ Support systèmes et réseaux</li>
+            <li>‣ Technicien d'infrastructure</li>
+            <li>‣ Technicien de production</li>
+            <li>‣ Technicien micro et réseaux</li>
+          </ul>
+        </div>
+        <style>
+          .dotted-separator {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 20px;
+            position: relative;
+          }
+          .dot {
+            width: 8px;
+            height: 8px;
+            background: #FF8C00;
+            border-radius: 50%;
+            position: relative;
+            animation: dotPulse 2s infinite;
+          }
+          .dot::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            background: rgba(74, 144, 226, 0.3);
+            border-radius: 50%;
+            animation: ripple 2s infinite;
+          }
+          @keyframes dotPulse {
+            0%, 100% { transform: scale(1); background: #FF8C00; }
+            50% { transform: scale(1.2); background: #4a90e2; }
+          }
+          @keyframes ripple {
+            0% { width: 16px; height: 16px; opacity: 1; }
+            100% { width: 32px; height: 32px; opacity: 0; }
+          }
+        </style>
+        <div class="dotted-separator">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="box" style="flex: 1; margin-left: 40px; opacity: 0; transition: opacity 2s ease-in-out;">
+          <h3>Option SLAM💻</h3>
+          <p>La spécialité SLAM (Solutions Logicielles et Applications Métiers) se concentre sur le développement de logiciels et d'applications. Les étudiants sont formés à la conception, la réalisation et la maintenance de solutions logicielles répondant aux besoins des entreprises.
+            <br>voici quelques metiers qu'un titulaire de l'option  SLAM peut exercer:<br></p>
+            <ul style="list-style-type: none; padding: 0; text-align: left;">
+              <li>‣ Analyste d’applications ou d’études</li>
+              <li>‣ Développeur d’applications informatiques</li>
+              <li>‣ Développeur informatique</li>
+              <li>‣ Programmeur analyste</li>
+              <li>‣ Responsable des services applicatifs</li>
+              <li>‣ Programmeur d’applications</li>
+              <li>‣ Technicien d’études informatiques</li>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 60px;">
+      <div class="sectiontitle" style="margin-bottom: 30px;">
+        <p class="heading font-x2" style="color: #FF8C00;">Parcours scolaire🎓</p>
+      </div>
+      <div style="position: relative;">
+        <style>
+          @keyframes drawLine {
+            0% {
+              height: 0;
+              opacity: 0;
+            }
+            100% {
+              height: 340px;
+              opacity: 1;
+            }
+          }
+
+          @keyframes glowPulse {
+            0% { box-shadow: 0 0 8px rgba(74, 144, 226, 0.6); }
+            50% { box-shadow: 0 0 15px rgba(74, 144, 226, 0.8); }
+            100% { box-shadow: 0 0 8px rgba(74, 144, 226, 0.6); }
+          }
+
+          .timeline-line {
+            animation: drawLine 1.5s ease-out forwards, glowPulse 2s ease-in-out infinite;
+          }
+        </style>
+        <div class="timeline-line" style="position: absolute; left: 50%; top: 45px; width: 4px; background-color: #4a90e2; transform: translateX(-50%); height: 0;"></div>
+        
+        <!-- TILLON -->
+        <div style="display: flex; margin-bottom: 50px; position: relative;">
+          <div style="flex: 1; padding-right: 50px; text-align: right;">
+            <div style="background-color: #e6e9f0; padding: 20px; border-radius: 8px; display: inline-block; min-width: 400px;">
+              <h3 style="margin: 0;">BAC PRO SN option RISC</h3>
+              <p style="color: #666; margin: 5px 0;">2021-2022</p>
+              <p style="margin: 0;">Lycée Pro Charles Tillon<br>(Rennes 35)</p>
+            </div>
+          </div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; margin-top: 20px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 2px #4a90e2; overflow: hidden;">
+            <img src="./images/demo/tillon.png" alt="Charles Tillon" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;"></div>
+        </div>
+
+        <!-- Akalis -->
+        <div style="display: flex; margin-bottom: 50px; position: relative;">
+          <div style="flex: 1;"></div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; margin-top: 20px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 2px #4a90e2; overflow: hidden;">
+            <img src="./images/demo/akalis.png" alt="Akalis" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1; padding-left: 50px;">
+            <div style="background-color: #e6e9f0; padding: 20px; border-radius: 8px; display: inline-block; min-width: 400px;">
+              <h3 style="margin: 0;">BTS SIO option SISR en alternance</h3>
+              <p style="color: #666; margin: 5px 0;">2023-2024</p>
+              <p style="margin: 0;">• 1ère année Akalis (neuilly-sur-seine 92)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- estiam-IT-->
+        <div style="display: flex; position: relative;">
+          <div style="flex: 1; padding-right: 50px; text-align: right;">
+            <div style="background-color: #e6e9f0; padding: 20px; border-radius: 8px; display: inline-block; min-width: 400px;">
+              <h3 style="margin: 0;">BTS SIO option SISR en alternance</h3>
+              <p style="color: #666; margin: 5px 0;">2024-2025</p>
+              <p style="margin: 0;">•2ème année Estiam (paris 75)</p>
+            </div>
+          </div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; margin-top: 20px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 2px #4a90e2; overflow: hidden;">
+            <img src="./images/demo/estiam.png" alt="Estiam" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;"></div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 60px;">
+      <div class="sectiontitle" style="margin-bottom: 30px;">
+        <p class="heading font-x2" style="color: #FF8C00;">Parcours professionnel💼</p>
+      </div>
+      <div style="position: relative;">
+        <style>
+          @keyframes drawProfLine {
+            0% {
+              height: 0;
+              opacity: 0;
+            }
+            100% {
+              height: 400px;
+              opacity: 1;
+            }
+          }
+
+          .timeline-line-prof {
+            animation: drawProfLine 1.5s ease-out forwards, glowPulse 2s ease-in-out infinite;
+          }
+        </style>
+        <div class="timeline-line-prof" style="position: absolute; left: 50%; top: 45px; width: 4px; background-color: #4a90e2; transform: translateX(-50%); height: 0;"></div>
+        
+        <!-- Stage -->
+        <div style="display: flex; margin-bottom: 50px; position: relative;">
+          <div style="flex: 1; padding-right: 50px; text-align: right;">
+            <div style="background-color: #e6e9f0; padding: 20px; border-radius: 8px; display: inline-block; min-width: 400px;">
+              <h3 style="margin: 0;">Stage de terminale PFMP chez Mobilis Discount</h3>
+              <p style="color: #666; margin: 5px 0;">2022</p>
+              <p style="margin: 0;">• 100 Rue du Puits de la ville,<br>(79180 Chauray)</p>
+            </div>
+          </div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; margin-top: 20px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 2px #4a90e2; overflow: hidden;">
+            <img src="./images/demo/Mobilis.png" alt="Stage" style="width: 100%; height: 100%; object-fit: contain; background-color: white;">
+          </div>
+          <div style="flex: 1;"></div>
+        </div>
+
+        <!-- Alternance 1 -->
+        <div style="display: flex; margin-bottom: 50px; position: relative;">
+          <div style="flex: 1;"></div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; margin-top: 20px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 2px #4a90e2; overflow: hidden;">
+            <img src="./images/demo/Mobilis.png" alt="Alternance 1" style="width: 100%; height: 100%; object-fit: contain; background-color: white;">
+          </div>
+          <div style="flex: 1; padding-left: 50px;">
+            <div style="background-color: #e6e9f0; padding: 20px; border-radius: 8px; display: inline-block; min-width: 400px;">
+              <h3 style="margin: 0;">Reparateur de telephone mobile Chez Mobilis discount</h3>
+              <p style="color: #666; margin: 5px 0;">2023</p>
+              <p style="margin: 0;">•100 Rue du Puits de la ville,<br>(79180 Chauray)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alternance 2 -->
+        <div style="display: flex; position: relative;">
+          <div style="flex: 1; padding-right: 50px; text-align: right;">
+            <div style="background-color: #e6e9f0; padding: 20px; border-radius: 8px; display: inline-block; min-width: 400px;">
+              <h3 style="margin: 0;">Administrateur support à INRIA</h3>
+              <p style="color: #666; margin: 5px 0;">2023 - Présent</p>
+              <p style="margin: 0;">• 1 Rue Honoré d'Estienne d'Orves,<br>(91120 Palaiseau)</p>
+            </div><div><br><br></div>
+          </div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; margin-top: 20px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 2px #4a90e2; overflow: hidden;">
+            <img src="./images/inria.png" alt="Logo INRIA" style="width: 100%; height: 100%; object-fit: contain; background-color: white;">
+          </div>
+          <div style="flex: 1;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <p class="fl_left">Copyright &copy; 2025 - All Rights Reserved - <a href="#">Bafodé FADIGA</a></p>
+    <p class="fl_right">Portfolio BTS SIO</p>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const boxes = document.querySelectorAll('.presentation-box .box');
+    boxes.forEach(box => {
+      box.style.opacity = 1;
+    });
+  });
+
+  var typed = new Typed('#typed-text', {
+    strings: ['Bienvenue sur mon portfolio', 'Découvrez mes projets', 'Contactez-moi pour plus d\'informations'],
+    typeSpeed: 50,
+    backSpeed: 25,
+    backDelay: 2000,
+    startDelay: 1000,
+    loop: true
+  });
+</script>
+
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
